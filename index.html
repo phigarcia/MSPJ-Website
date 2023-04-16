@@ -15,17 +15,24 @@
 			font-family: Helvetica, Arial, sans-serif;
 		}
 
-		.link {
-    		width: 50%;
-			display: inline-block;
-    		float: left;
+		.sprite-left {
+        position: absolute;
+			  display: block;
     		text-align: center;
+        right: 100%
 		}
+		.sprite-right {
+        position: absolute;
+			  display: block;
+    		text-align: center;
+        left: 100%
+		}
+
 		
 		/* Style for the Info Menu */
 		.info-menu {
+      position: relative;
             margin: 20px auto;
-			margin-top: 20px;
 			border: 1px solid #c1aeff;
             opacity: 0.85;
 			border-radius: 10px;
@@ -82,10 +89,10 @@
 	<h3><center>CS4850 Spring 2023 Final Project</center></h3>
 	<center><img src="images/doge.jpeg" width="30%" alt="doge placeholder"></center>
 
-    <div class="link"><img src="images/walk-cycle.gif" alt="mc walk cycle animation"></div>
-    <div class="link"><img src="images/mspajamas.gif" alt="ms. pj walk cycle animation"></div>
-
 	<div class="info-menu">
+    <div class="sprite-left"><img src="images/walk-cycle.gif" alt="mc walk cycle animation"></div>
+    <div class="sprite-right"><img src="images/mspajamas.gif" alt="ms. pj walk cycle animation"></div>
+
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
 			<b>Overview</b>
 			<div class="info-menu-item-content">
@@ -145,6 +152,6 @@
 				Marvin Chong, Samik Mathur, Phi Garcia, and Jake Pine!
 			</div>
 		</div>
-	</div>
+  </div>
 </body>
 </html>
