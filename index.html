@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MSPJ Game Engine</title>
+	<link rel="icon" href="images/favicon.png">
+	<style>
+		body {
+  			background-image: url('images/mspj-bg.png');
+  			background-repeat: no-repeat;
+  			background-attachment: fixed;
+  			background-size: cover;
+		}
+
+		/* Style for the Info Menu */
+		.info-menu {
+            margin: 20px auto;
+			margin-top: 20px;
+			border: 1px solid #ccc;
+			border-radius: 10px;
+			padding: 10px;
+			background-color: #f9f9f9;
+			width: 600px;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+		
+		/* Style for the Info Menu Items */
+		.info-menu-item {
+			cursor: pointer;
+			padding: 5px 0;
+            padding-left: 10px;
+			border-bottom: 2px solid #16125c;
+            border-radius: 10px;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		
+		/* Style for the Active Info Menu Item */
+		.active-info-menu-item {
+			background-color: #ccc;
+		}
+		
+		/* Style for the Info Menu Item Content */
+		.info-menu-item-content {
+			display: none;
+			padding: 5px 0;
+            padding-left: 10px;
+            border-radius: 10px;
+			font-family: Helvetica, Arial, sans-serif;
+		}
+		
+		/* Style for the Active Info Menu Item Content */
+		.active-info-menu-item .info-menu-item-content {
+			display: block;
+		}
+	</style>
+	<script>
+		// Function to toggle active class on info menu items
+		function toggleActiveClass(elem) {
+			var infoMenuItems = document.getElementsByClassName("info-menu-item");
+			for (var i = 0; i < infoMenuItems.length; i++) {
+				infoMenuItems[i].classList.remove("active-info-menu-item");
+			}
+			elem.classList.add("active-info-menu-item");
+		}
+	</script>
+</head>
+<body>
+	<div class="info-menu">
+		<div class="info-menu-item" onclick="toggleActiveClass(this)">
+			Overview
+			<div class="info-menu-item-content">
+				This is the content for Menu Item 1.
+			</div>
+		</div>
+		<div class="info-menu-item" onclick="toggleActiveClass(this)">
+			Features
+			<div class="info-menu-item-content">
+				This is the content for Menu Item 2.
+			</div>
+		</div>
+		<div class="info-menu-item" onclick="toggleActiveClass(this)">
+			Documentation
+			<div class="info-menu-item-content">
+				This is the content for Menu Item 3.
+			</div>
+		</div>
+		<div class="info-menu-item" onclick="toggleActiveClass(this)">
+			Engine Architecture
+			<div class="info-menu-item-content">
+				This is the content for Menu Item 3.
+			</div>
+		</div>
+		<div class="info-menu-item" onclick="toggleActiveClass(this)">
+			Binaries
+			<div class="info-menu-item-content">
+				This is the content for Menu Item 3.
+			</div>
+		</div>
+		<div class="info-menu-item" onclick="toggleActiveClass(this)">
+			Post-Mortem
+			<div class="info-menu-item-content">
+				This is the content for Menu Item 3.
+			</div>
+		</div>
+	</div>
+</body>
+</html>
