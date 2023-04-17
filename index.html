@@ -15,10 +15,11 @@
 		.info-menu {
             margin: 20px auto;
 			margin-top: 20px;
-			border: 1px solid #ccc;
+			border: 1px solid #c1aeff;
+            opacity: 0.85;
 			border-radius: 10px;
 			padding: 10px;
-			background-color: #f9f9f9;
+			background-color: #c1aeff;
 			width: 600px;
 			font-size: 18px;
 			line-height: 1.5;
@@ -36,7 +37,7 @@
 		
 		/* Style for the Active Info Menu Item */
 		.active-info-menu-item {
-			background-color: #ccc;
+			background-color: #ffffff;
 		}
 		
 		/* Style for the Info Menu Item Content */
@@ -45,6 +46,7 @@
 			padding: 5px 0;
             padding-left: 10px;
             border-radius: 10px;
+            opacity: 0.95;
 			font-family: Helvetica, Arial, sans-serif;
 		}
 		
@@ -70,40 +72,62 @@
 
 	<div class="info-menu">
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
-			Overview
+			<b>Overview</b>
 			<div class="info-menu-item-content">
-				This is the content for Menu Item 1.
+				The MSPJ game engine is a component-based engine with tile paintbrush level design functionality. It is meant for top-down, sprite-based
+                RPG-style games. Users can also add their own python scripts to modify the behavior of the game objects. The engine's paintbrush tool GUI is 
+                based on the kiss_sdl library. 
 			</div>
 		</div>
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
-			Features
+			<b>Features</b>
 			<div class="info-menu-item-content">
-				- Custom tile paintbrush with GUI to select drawing tiles 
-                    - Switch between brush 'b' and eraser 'e'!
+                <ul>
+                    <li>Custom tile paintbrush with GUI to select drawing tiles</li>
+                        <ul>
+                            <li>Switch between brush 'b' and eraser 'e'</li>
+                        </ul>
+                    <li>Tea</li>
+                    <li>Milk</li>
+                  </ul> 
 			</div>
 		</div>
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
-			Documentation
+			<b>Documentation</b>
 			<div class="info-menu-item-content">
 				This is the content for Menu Item 3.
 			</div>
 		</div>
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
-			Engine Architecture
+			<b>Engine Architecture</b>
 			<div class="info-menu-item-content">
 				This is the content for Menu Item 3.
 			</div>
 		</div>
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
-			Binaries
+			<b>Binaries</b>
 			<div class="info-menu-item-content">
 				This is the content for Menu Item 3.
 			</div>
 		</div>
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
-			Post-Mortem
+			<b>Post-Mortem</b>
 			<div class="info-menu-item-content">
-				This is the content for Menu Item 3.
+				Things we did well:<br> 
+                One of our biggest strengths was scoping the project. The MSPJ team produced the engine and game in an agile-adjacent workflow with weekly “sprints”. We regularly had standups where we let the team know what we were working on, what we were having issues with, and what our intentions and schedules for the project were for the following week. Because of this system, we were able to clearly define and organize our goals. <br> <br> 
+                Due to the vast amount of planning the MSPJ team did at the beginning of the project, we are particularly proud of our engine architecture. Our tile paintbrush for level design was also particularly ambitious for the amount of time we had. Add more info about architecture and paintbrush here
+                <br> <br> 
+                How to take the project further:<br> 
+                Because of the tile paintbrush level designer, our team missed out on a few features we originally intended to add. We originally wanted to include a simple turn-based combat system with narrative, but the tile/sprite collisions and paintbrush took longer than we expected. 
+                <br> <br> 
+                What we would change if we had another month: 
+
+			</div>
+		</div>
+        <div class="info-menu-item" onclick="toggleActiveClass(this)">
+			<b>Credits</b>
+			<div class="info-menu-item-content">
+				Marvin Chong, Samik Mathur, Phi Garcia, and Jake Pine!
 			</div>
 		</div>
 	</div>
