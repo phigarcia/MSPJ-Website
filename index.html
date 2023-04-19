@@ -35,7 +35,6 @@
       position: relative;
             margin: 20px auto;
 			border: 1px solid #c1aeff;
-            opacity: 0.85;
 			border-radius: 10px;
 			padding: 10px;
 			background-color: #c1aeff;
@@ -74,6 +73,11 @@
 		.active-info-menu-item .info-menu-item-content {
 			display: block;
 		}
+
+		.hotkey {
+			background-color: rgb(221, 221, 221);
+        	color: #ff0000;
+      	}
 	</style>
 	<script>
 		// Function to toggle active class on info menu items
@@ -109,10 +113,11 @@
                 <ul>
                     <li>Custom tile paintbrush with GUI to select drawing tiles</li>
                         <ul>
-                            <li>Switch between brush 'b' and eraser 'e'</li>
+                            <li>Brush <div class="hotkey" style="display: inline;"><b>b</b></div> draws the tile of your choosing by typing in its corresponding integer 
+							<li>Eraser <div class="hotkey" style="display: inline;"><b>e</b></div> erases the tile you select</li> 
+							<li>Collider brush <div class="hotkey" style="display: inline;"><b>c</b></div> adds collidable tiles, represented by a red tinge over tiles</li>
+							<li>Collider eraser <div class="hotkey" style="display: inline;"><b>r</b></div> deletes the collidable tile you select</li>
                         </ul>
-                    <li>Tea</li>
-                    <li>Milk</li>
                   </ul> 
 			</div>
 		</div>
@@ -138,15 +143,48 @@
 		<div class="info-menu-item" onclick="toggleActiveClass(this)">
 			<b>Post-Mortem</b>
 			<div class="info-menu-item-content">
-				Things we did well:<br> 
-                One of our biggest strengths was scoping the project. The MSPJ team produced the engine and game in an agile-adjacent workflow with weekly “sprints”. We regularly had standups where we let the team know what we were working on, what we were having issues with, and what our intentions and schedules for the project were for the following week. Because of this system, we were able to clearly define and organize our goals. <br> <br> 
-                Due to the vast amount of planning the MSPJ team did at the beginning of the project, we are particularly proud of our engine architecture. Our tile paintbrush for level design was also particularly ambitious for the amount of time we had. Add more info about architecture and paintbrush here
-                <br> <br> 
-                How to take the project further:<br> 
-                Because of the tile paintbrush level designer, our team missed out on a few features we originally intended to add. We originally wanted to include a simple turn-based combat system with narrative, but the tile/sprite collisions and paintbrush took longer than we expected. 
-                <br> <br> 
-                What we would change if we had another month: 
-
+				<b>Things we did well: </b>
+				<ul>
+					<li>Good at scoping</li>
+						<ul>
+							<li>At the beginning, we brainstormed a lot of potential ideas, and we gradually narrowed down the ideas that we were interested in. We always took small chews, making incremental changes to the game engine such that we were always to compile it.</li>
+							<li>We used Miro as a tool for brainstorming and planning, maximizing our productivity.</li>
+							<li>The MSPJ team produced the engine and game in an agile-adjacent workflow with weekly “sprints”. We regularly had standups where we let the team know what we were working on, what we were having issues with, and what our intentions and schedules for the project were for the following week. Because of this system, we were able to clearly define and organize our goals. </li>
+						</ul>
+					<li>Engine Architecture</li>
+						<ul>
+							<li>As per the assignment specification, we used an entity-component system, where the event-handling (including input), update and rendering are all delegated to game objects. This allowed for us to modify the behavior of game objects easily by making components that can interface with the rest of the engine with those three things. </li>
+							<li>The idea of components also allowed us the tile map editor component, which is an extension of our engine that allows users to paint tiles on the tile map.							</li>
+						</ul>
+					<li>Tile brush and pallete</li>
+						<ul>
+							<li>This was the main selling point of our game engine (aside from the minimum requirement of an entity-component system and integrating a scripting language).							</li>
+							<li>It felt excellent to be able to modify a tile map with GUI support.</li>
+						</ul>
+					<li>Jake's build system</li>
+						<ul>
+							<li>Jake created us a build system that was able to build the game engine with the tile map editor support and the game that we were making with our engine that could be made only by knowing Python. This allowed for a smooth process.							</li>
+						</ul>
+					<li>Phi's art</li>
+						<ul>
+							<li>Phi took the extra step to make art for our game, and they were all amazing.							</li>
+						</ul>
+					<li>Pair programming and supporting eachother</li>
+						<ul>
+							<li>We often implemented features in pairs. We bounced ideas off each other to make design decisions, keeping us all on the same page and ensuring that our stress testing our ideas.							</li>
+							<li>Regardless, when we faced problems, we were looking out for each other, giving each other technical and emotional support.</li>
+						</ul>
+				</ul>
+				<b>How to take the project further:</b>
+				<ul>
+					<li>We originally intended to have combat and RPG-style narrative elements. If we had more time, we could implement the components that would allow for those systems.					</li>
+					<li>A stronger integration of a GUI library. As of now, it's only good enough for buttons and entry boxes. Learning a GUI library takes time, and being able to integrate it effectively with existing architecture takes more careful planning and consideration.					</li>
+				</ul>
+				<b>What we would change if we had another month:</b>
+				<ul>
+					<li>The tile editor GUI should allow users to see the texture atlas and click on the tiles they want to paint with, and that would automatically select with. This would be more ergonomic than selecting a tile to paint with via a unique identifier.					</li>
+				</ul>
+				
 			</div>
 		</div>
         <div class="info-menu-item" onclick="toggleActiveClass(this)">
